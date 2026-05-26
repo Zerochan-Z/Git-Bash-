@@ -79,7 +79,7 @@ Git Bash - terminal for week 3 learning as UTAR June intake student. (25/05)
 | `..` | Parent directory |
 | `~` | Home directory |
 | `/` | Root directory or folder separator |
-| `*` | Wildcard (matches anything) |
+| `*` | Anything starts with / Everything / *{file}* |
 | `>` | Redirect output (overwrite) |
 | `>>` | Redirect output (append) |
 
@@ -129,5 +129,29 @@ Git Bash - terminal for week 3 learning as UTAR June intake student. (25/05)
 | `python: command not found` | Python not in PATH |
 | `cannot delete: Directory not empty` | Folder has files inside |
 | `permission denied` | No permission for file |
+
+---
+
+## Complete Command Summary
+
+| Step | Command | What it does |
+|------|---------|--------------|
+| 1 | `ls` | Check current files |
+| 2 | `touch move_csv.sh` | Create script file |
+| 3 | `notepad move_csv.sh` | Open for editing |
+| 4 | (type script in Notepad) | Write the commands |
+| 5 | `chmod +x move_csv.sh` | Make executable |
+| 6 | `./move_csv.sh` | Run the script |
+| 7 | `ls` | Verify result |
+
+---
+
+## What Each Line in the Script Does
+
+| Line | Meaning |
+|------|---------|
+| `#!/bin/bash` | "Run this with Bash interpreter" |
+| `mkdir -p csv_files` | "Create folder named csv_files (don't error if exists)" |
+| `mv *.csv csv_files/` | "Move all files ending with .csv into that folder" |
 
 ---
